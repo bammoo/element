@@ -3,7 +3,8 @@
     class="el-dropdown-menu__item"
     :class="{
       'is-disabled': disabled,
-      'el-dropdown-menu__item--divided': divided
+      'el-dropdown-menu__item--divided': divided,
+      'el-dropdown-menu__item--hasLink': haslink
     }"
     @click="handleClick"
     :aria-disabled="disabled"
@@ -23,7 +24,11 @@
     props: {
       command: {},
       disabled: Boolean,
-      divided: Boolean
+      divided: Boolean,
+      haslink: {
+        type: Boolean,
+        default: false
+      }
     },
 
     methods: {

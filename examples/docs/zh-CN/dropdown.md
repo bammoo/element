@@ -66,7 +66,7 @@
     下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
+    <el-dropdown-item haslink><a href='http://ad.weixin.qq.com' target='_blank'>黄金糕</a></el-dropdown-item>
     <el-dropdown-item>狮子头</el-dropdown-item>
     <el-dropdown-item>螺蛳粉</el-dropdown-item>
     <el-dropdown-item disabled>双皮奶</el-dropdown-item>
@@ -242,7 +242,7 @@
     下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item command="a">黄金糕</el-dropdown-item>
+    <el-dropdown-item command="a">黄金糕1</el-dropdown-item>
     <el-dropdown-item command="b">狮子头</el-dropdown-item>
     <el-dropdown-item command="c">螺蛳粉</el-dropdown-item>
     <el-dropdown-item command="d" disabled>双皮奶</el-dropdown-item>

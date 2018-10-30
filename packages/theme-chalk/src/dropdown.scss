@@ -100,6 +100,14 @@
       }
     }
 
+    @include m(hasLink) {
+      padding: 0;
+
+      & a {
+        padding: 0 20px;
+      }
+    }
+
     @include when(disabled) {
       cursor: default;
       color: $--font-color-disabled-base;
