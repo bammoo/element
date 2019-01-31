@@ -14,9 +14,7 @@
 
     computed: {
       barStyle: {
-        cache: false,
         get() {
-          if (!this.$parent.$refs.tabs) return {};
           let style = {};
           let offset = 0;
           let tabSize = 0;
@@ -26,7 +24,7 @@
             return str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
           };
           this.tabs.every((tab, index) => {
-            let $el = arrayFind(this.$parent.$refs.tabs, t => t.id.replace('tab-', '') === tab.name);
+            let $el = arrayFind(this.$parent.$refs.tabs || [], t => t.id.replace('tab-', '') === tab.paneName);
             if (!$el) { return false; }
 
             if (!tab.active) {
