@@ -3,13 +3,13 @@
     class="el-dropdown-menu__item"
     :class="{
       'is-disabled': disabled,
-      'el-dropdown-menu__item--divided': divided,
-      'el-dropdown-menu__item--hasLink': haslink
+      'el-dropdown-menu__item--divided': divided
     }"
     @click="handleClick"
     :aria-disabled="disabled"
     :tabindex="disabled ? null : -1"
   >
+    <i :class="icon" v-if="icon"></i>
     <slot></slot>
   </li>
 </template>
@@ -25,10 +25,7 @@
       command: {},
       disabled: Boolean,
       divided: Boolean,
-      haslink: {
-        type: Boolean,
-        default: false
-      }
+      icon: String
     },
 
     methods: {
